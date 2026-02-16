@@ -1,13 +1,14 @@
 import { Container } from './layouts/Container'
 import { Navbar } from './layouts/Navbar'
 import { Hero } from './components/sections/Hero'
+import { Header } from './layouts/Header'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <main>
         <Hero />
       </main>
