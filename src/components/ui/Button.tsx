@@ -5,7 +5,7 @@ type ButtonProps = {
 }
 
 export const Button = ({ size, children, href}: ButtonProps) => {
-    
+
     let sizeClasses = "py-2 px-4 rounded mt-4"
     switch(size) {
         case 'sm':
@@ -19,7 +19,7 @@ export const Button = ({ size, children, href}: ButtonProps) => {
     }
 
     return (
-        <a href={href} className={`inline-flex text-center bg-blue-500 text-white ${sizeClasses} hover:bg-blue-600 transition-colors duration-300`}>
+        <a href={href} className={`inline-flex text-center bg-blue-500 text-white ${sizeClasses} hover:bg-blue-600 transition-colors duration-300`} data-testid="button">
             {children}
         </a>
     )
