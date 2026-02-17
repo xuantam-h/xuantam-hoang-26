@@ -22,4 +22,11 @@ describe('Button Component', () => {
     const btnElement = screen.getByTestId('button');
     expect(btnElement).toHaveClass('py-3 px-6 rounded mt-6');
   });
-});
+
+    it('applies the default size class when size prop is not specified', () => {
+    render(<Button data-testid="button" href="#about">Click me</Button>);
+
+    const btnElement = screen.getByTestId('button');
+    expect(btnElement).toHaveClass('py-2 px-4 rounded mt-4');
+  });
+}); 
