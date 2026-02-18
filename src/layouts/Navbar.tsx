@@ -1,12 +1,19 @@
 import { Menu } from "lucide-react"
-import { navLinks } from "../data/nav"
+import { socialLinks } from "../data/nav"
+import { DynamicIcon } from 'lucide-react/dynamic';
 
 export const Navbar = () => {
     return (
-        <header>
-            <nav className="flex justify-between p-6 fixed top-0 z-10 w-full">
-                <p>XT.</p>
+        <header className="flex fixed p-4 top-0 right-0 z-10 w-full justify-end md:w-auto md:min-h-screen ">
+            <nav className="flex justify-between md:flex-col justify-between ">
                 <Menu />
+                <div className="social-links hidden md:flex md:flex-col gap-4">
+                    {socialLinks.map((link) => (
+                        <a key={link.name} href={link.href}>
+                            <DynamicIcon name={link.name} />
+                        </a>
+                    ))}
+                </div>
             </nav>
         </header>
     )

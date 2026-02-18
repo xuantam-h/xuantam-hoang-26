@@ -1,7 +1,5 @@
-export const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experiences', href: '#experiences' },
-    { name: 'Connect', href: '#contact' },
+export const socialLinks = [
+    { name: 'github', href: 'https://github.com/xuantam-h' },
+    { name: 'linkedin', href: 'https://www.linkedin.com/in/xuantam-h/' },
+    { name: 'mail', href: 'https://www.linkedin.com/in/xuantam-h/' },
 ]
