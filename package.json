@@ -11,6 +11,8 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/libre-caslon-text": "^5.2.7",
     "@tailwindcss/vite": "^4.1.18",
     "framer-motion": "^12.34.0",
     "lucide-react": "^0.564.0",

@@ -6,20 +6,20 @@ type ButtonProps = {
 
 export const Button = ({ size, children, href}: ButtonProps) => {
 
-    let sizeClasses = "py-2 px-4 rounded mt-4"
+    let sizeClasses = "mt-4"
     switch(size) {
         case 'sm':
-            sizeClasses = "py-1 px-2 text-sm rounded mt-2"
+            sizeClasses = "text-sm mt-2"
             break
         case 'lg':
-            sizeClasses = "py-3 px-6 rounded mt-6"
+            sizeClasses = "mt-6"
             break
         default:
-            sizeClasses = "py-2 px-4 rounded mt-4"
+            sizeClasses = "mt-4"
     }
 
     return (
-        <a href={href} className={`inline-flex text-center bg-blue-500 text-white ${sizeClasses} hover:bg-blue-600 transition-colors duration-300`} data-testid="button">
+        <a href={href} className={`btn-line inline-flex items-center text-center font-serif italic gap-2 duration-300 ${sizeClasses}`} data-testid="button">
             {children}
         </a>
     )
