@@ -19,7 +19,7 @@ export const Button = ({ size, children, href}: ButtonProps) => {
     }
 
     return (
-        <a href={href} className={`btn-line inline-flex items-center text-center font-serif italic gap-2 duration-300 ${sizeClasses}`} data-testid="button">
+        <a href={href} className={`btn-line inline-flex items-center text-center uppercase font-bold gap-2 duration-300 ${sizeClasses}`} data-testid="button">
             {children}
         </a>
     )
