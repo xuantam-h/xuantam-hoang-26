@@ -1,8 +1,12 @@
 import { ArrowDownToLine } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next';
+
 
 export const Hero = () => {
+        const { t, i18n } = useTranslation();
+
         return (
             <section id="hero" className="scene flex items-center justify-start min-h-screen px-10">
                 <div className="hero-content">
@@ -11,7 +15,7 @@ export const Hero = () => {
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
                         className="text-5xl md:text-6xl lg:text-7xl font-serif text-black">
-                        Hi, I'm <span className='italic'>Xuan-Tam</span>
+                        {t("welcome")}
                     </motion.h1>
                 </div>
             </section>

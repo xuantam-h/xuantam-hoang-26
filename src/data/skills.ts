@@ -1,14 +1,30 @@
 export const skills = [
   {
-    name: "HTML/CSS",
+    name: "Programming Languages",
+    skills: [
+      "HTML/CSS",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+    ],
   },
   {
-    name: "JavaScript",
+    name: "Libraries & Frameworks",
+    skills: [
+      "React",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Motion",
+    ],
   },
   {
-    name: "TypeScript",
-  },
-  {
-    name: "React",
+    name: "Tools",
+    skills: [
+      "Git",
+      "GitHub",
+      "Adobe XD",
+      "Figma",
+      "Vite",
+    ],
   },
 ];
