@@ -15,6 +15,8 @@ export const skills = [
       "Tailwind CSS",
       "Bootstrap",
       "Motion",
+      "i18next",
+      "Vitest",
     ],
   },
   {

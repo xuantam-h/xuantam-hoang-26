@@ -9,7 +9,7 @@ body{
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Libre Caslon Text", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Newsreader Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-black: #2D2926;
 }
 
@@ -60,4 +60,15 @@ section{
   height: 100vh;
   display: grid;
   place-items: center;
+}
+
+.btn{
+  display: inline-flex;
+  padding: .6rem 1.5rem;
+  border: 2px solid #eee;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }

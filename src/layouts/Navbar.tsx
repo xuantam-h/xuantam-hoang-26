@@ -17,7 +17,7 @@ export const Navbar = () => {
                 <X onClick={() => setIsMenuOpen(false)} size={40} strokeWidth={1} className="cursor-pointer"/> : 
                 <Menu onClick={() => setIsMenuOpen(true)} size={40} strokeWidth={1} className="cursor-pointer"/>}
             </nav>
-            <div className="language-switch">
+            <div className="language-switch flex gap-4">
                 <button onClick={() => changeLanguage("en")}>EN</button>
                 <button onClick={() => changeLanguage("fr")}>FR</button>
             </div>
