@@ -1,6 +1,17 @@
 import { motion } from "framer-motion"
 import { skills } from "../../data/skills"
 import { Trans } from "react-i18next";
+import { Tag } from "../ui/Tag";
+
+const container = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.6, delayChildren: 2 } }
+}
+
+const item = {
+    hidden: { opacity: 0, x: -20, filter: "blur(5px)" },
+    visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.4 } }
+}
 
 export const Skills = () => {
 
@@ -12,25 +23,21 @@ export const Skills = () => {
                         <Trans i18nKey="skills">I rely on the following <strong>technical skills</strong> to build responsive, high-performance web applications.</Trans>
                     </p>
                 </div>
-                <div className="skills-list flex-2 flex flex-col gap-15 mt-10">
+                <motion.div variants={container} initial="hidden" animate="visible" className="skills-list flex-2 flex flex-col gap-6 md:gap-15 mt-10">
                     {skills.map((skill) => (
                         <motion.div
                             key={skill.name}
-                            initial={{ opacity: 0, x: -10, filter: "blur(5px)" }}
-                            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+                            variants={item}
                             className="skill-item">
-                            <h3 className="text-xl font-bold mb-2">{skill.name}</h3>
+                            <h3 className="text-lg md:text-xl font-bold mb-2">{skill.name}</h3>
                             <ul className="flex flex-wrap gap-2 items-start">
                                 {skill.skills.map((skillItem) => (
-                                    <li key={skillItem} className="badge inline-flex text-sm py-1 px-3 bg-black text-white font-bold">
-                                        {skillItem}
-                                    </li>
+                                    <Tag skillItem={skillItem} />
                                 ))}
                             </ul>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     )

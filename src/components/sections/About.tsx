@@ -8,7 +8,7 @@ export const About = () => {
             <motion.div 
                 initial={{ opacity: 0, y: -10, filter: "blur(5px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                 className="md:w-1/2 text-center">
                 <p className="mt-6 text-xl md:text-3xl">
                     <Trans i18nKey="about">
