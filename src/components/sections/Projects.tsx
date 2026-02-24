@@ -1,15 +1,19 @@
+import { motion } from "framer-motion"
 import { HorizontalSlider } from "../ui/HorizontalSlider"
-import { Trans } from "react-i18next";
 
 export const Projects = () => {
     return (
         <section id="projects" className="flex items-center min-h-screen px-10">
             <div className="">
-                <div className="md:w-1/2">
+                <motion.div
+                initial={{ opacity: 0, x: -10, filter: "blur(5px)" }}
+                whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+                className="md:w-1/2">
                     <p className="text-xl md:text-3xl">
-                        <Trans i18nKey="skills">I rely on the following <strong>technical skills</strong> to build responsive, high-performance web applications.</Trans>
+                        Here are few relevant <strong>projects</strong> I've worked on throughout my career.
                     </p>
-                </div>
+                </motion.div>
                 <div className="projects-list flex flex-col md:flex-row gap-8 mt-10">
                     <HorizontalSlider></HorizontalSlider>
                 </div>

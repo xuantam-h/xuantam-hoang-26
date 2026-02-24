@@ -5,7 +5,7 @@ import { Tag } from "../ui/Tag";
 
 const container = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.6, delayChildren: 2 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.4 } }
 }
 
 const item = {
@@ -23,7 +23,7 @@ export const Skills = () => {
                         <Trans i18nKey="skills">I rely on the following <strong>technical skills</strong> to build responsive, high-performance web applications.</Trans>
                     </p>
                 </div>
-                <motion.div variants={container} initial="hidden" animate="visible" className="skills-list flex-2 flex flex-col gap-6 md:gap-15 mt-10">
+                <motion.div variants={container} initial="hidden" whileInView="visible" className="skills-list flex-2 flex flex-col gap-6 md:gap-15 mt-10">
                     {skills.map((skill) => (
                         <motion.div
                             key={skill.name}
