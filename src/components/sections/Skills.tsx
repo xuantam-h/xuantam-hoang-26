@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { skills } from "../../data/skills"
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Tag } from "../ui/Tag";
 
 const container = {
@@ -15,6 +15,8 @@ const item = {
 
 export const Skills = () => {
 
+    const { t, i18n } = useTranslation();
+
     return (
         <section id="skills" className="flex items-center min-h-screen px-10">
             <div>
@@ -23,16 +25,16 @@ export const Skills = () => {
                         <Trans i18nKey="skills">I rely on the following <strong>technical skills</strong> to build responsive, high-performance web applications.</Trans>
                     </p>
                 </div>
-                <motion.div variants={container} initial="hidden" whileInView="visible" className="skills-list flex-2 flex flex-col gap-6 md:gap-15 mt-10">
+                <motion.div variants={container} initial="hidden" whileInView="visible" className="skills-list flex-2 flex flex-col gap-6 md:gap-10 mt-10">
                     {skills.map((skill) => (
                         <motion.div
                             key={skill.name}
                             variants={item}
                             className="skill-item">
-                            <h3 className="text-lg md:text-xl font-bold mb-2">{skill.name}</h3>
+                            <h3 className="text-lg md:text-xl font-bold mb-2">{t(skill.translationKey)}</h3>
                             <ul className="flex flex-wrap gap-2 items-start">
                                 {skill.skills.map((skillItem) => (
-                                    <Tag skillItem={skillItem} />
+                                    <Tag key={skillItem} skillItem={skillItem} />
                                 ))}
                             </ul>
                         </motion.div>

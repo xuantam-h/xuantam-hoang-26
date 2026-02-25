@@ -1,6 +1,7 @@
 export const skills = [
   {
     name: "Programming Languages",
+    translationKey: "skill_1",
     skills: [
       "HTML/CSS",
       "JavaScript",
@@ -10,6 +11,7 @@ export const skills = [
   },
   {
     name: "Libraries & Frameworks",
+    translationKey: "skill_2",
     skills: [
       "React",
       "Tailwind CSS",
@@ -21,6 +23,7 @@ export const skills = [
   },
   {
     name: "Tools",
+    translationKey: "skill_3",
     skills: [
       "Git",
       "GitHub",

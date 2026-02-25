@@ -1,8 +1,10 @@
 import { motion } from "framer-motion"
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export const About = () => {
-    
+    const { t, ready } = useTranslation();
+    if (!ready) return null; // Ou un loader minimaliste
+
     return (
         <section id="about" className="scene flex items-center justify-center min-h-screen px-10">
             <motion.div 

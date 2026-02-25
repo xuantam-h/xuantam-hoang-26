@@ -20,4 +20,25 @@ export const projects = [
     image: "/assets/project-elite-sport.png",
     url: "https://elite-sport-performance.vercel.app/"
   },
+  {
+    id: 3,
+    title: "Elite sport performance",
+    tags: ["React", "Vite", "Tailwind"],
+    image: "/assets/project-elite-sport.png",
+    url: "https://elite-sport-performance.vercel.app/"
+  },
+  {
+    id: 3,
+    title: "Elite sport performance",
+    tags: ["React", "Vite", "Tailwind"],
+    image: "/assets/project-elite-sport.png",
+    url: "https://elite-sport-performance.vercel.app/"
+  },
+  {
+    id: 3,
+    title: "Elite sport performance",
+    tags: ["React", "Vite", "Tailwind"],
+    image: "/assets/project-elite-sport.png",
+    url: "https://elite-sport-performance.vercel.app/"
+  },
 ];
