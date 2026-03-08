@@ -32,7 +32,7 @@ export const Card = ({img, title, url} : CardProps) => {
                             </motion.a>
                         )}
                     </AnimatePresence>
-                    <img src="https://placehold.co/600x400" alt={title} className="w-full h-full object-cover" />
+                    <img src={img} alt={title} className="w-full h-full object-cover" />
                 </div>
             </motion.div>
     )

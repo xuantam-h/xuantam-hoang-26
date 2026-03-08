@@ -75,3 +75,11 @@ section{
   transform: translateX(-50%);
   border: 1px solid var(--border-color);
 }
+
+.card-img{
+  max-width: 37.5rem;
+}
+
+.card-img img{
+  height: 400px;
+}

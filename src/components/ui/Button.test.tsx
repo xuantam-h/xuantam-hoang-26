@@ -3,30 +3,37 @@ import { Button } from './Button';
 
 describe('Button Component', () => {
   it('renders the button with the provided text', () => {
-    render(<Button data-testid="button" href="#about">Click me</Button>);
+    render(<Button style="primary" data-testid="button" href="#about">Click me</Button>);
 
     const btnElement = screen.getByTestId('button');
     expect(btnElement).toHaveTextContent('Click me');
   });
 
   it('redirects to the correct relative URL', () => {
-    render(<Button data-testid="button" href="#about">Click me</Button>);
+    render(<Button style="primary" data-testid="button" href="#about">Click me</Button>);
 
     const btnElement = screen.getByTestId('button');
     expect(btnElement).toHaveAttribute('href', '#about');
   });
 
   it('applies the correct size classes', () => {
-    render(<Button data-testid="button" href="#about" size="lg">Click me</Button>);
+    render(<Button style="primary" data-testid="button" href="#" size="lg">Click me</Button>);
 
     const btnElement = screen.getByTestId('button');
-    expect(btnElement).toHaveClass('py-3 px-6 mt-6');
+    expect(btnElement).toHaveClass('mt-6 text-lg');
   });
 
-    it('applies the default size class when size prop is not specified', () => {
-    render(<Button data-testid="button" href="#about">Click me</Button>);
+  it('applies the correct style classes', () => {
+    render(<Button style="secondary" data-testid="button" href="#" size="lg">Click me</Button>);
 
     const btnElement = screen.getByTestId('button');
-    expect(btnElement).toHaveClass('py-2 px-4 mt-4');
+    expect(btnElement).toHaveClass('bg-gray-200 text-gray-800 hover:bg-gray-300');
+  });
+
+    it('applies the target attribute when specified', () => {
+    render(<Button style="primary" data-testid="button" href="#" target="_blank">Click me</Button>);
+
+    const btnElement = screen.getByTestId('button');
+    expect(btnElement).toHaveAttribute('target', '_blank');
   });
 }); 

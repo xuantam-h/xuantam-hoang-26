@@ -1,22 +1,23 @@
-import { Github, Globe, House, Linkedin, Menu, Send, X } from "lucide-react"
+import { Globe, House, Send } from "lucide-react"
 import { socialLinks } from "../data/nav"
 import { DynamicIcon } from 'lucide-react/dynamic';
-import { useState } from "react";
 import i18n from "../i18n";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
-    const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
-
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
     };
 
-    const openLanguageMenu = () => {
-        setIsLanguageMenuOpen(!isLanguageMenuOpen);
-    }
+    const { t, i18n } = useTranslation();
     
     return (
-        <nav className="fixed-navbar fixed right-0 z-10 px-4 py-2 top-[20px] flex gap-8 items-center max-w-max">
+        <motion.nav
+        initial={{ opacity: 0, y: -10, filter: "blur(5px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+        className="fixed-navbar flex gap-6 md:gap-8 items-center max-w-max px-4 py-2">
             <a href="#hero">
                 <House />
             </a>
@@ -25,17 +26,12 @@ export const Navbar = () => {
                     <DynamicIcon name={link.name} />
                 </a>
             ))}
-            <Globe onClick={openLanguageMenu} />
-            {isLanguageMenuOpen && (
-            <div className="language-switch bg-black flex gap-4">
-                <button onClick={() => changeLanguage("en")}>EN</button>
-                <button onClick={() => changeLanguage("fr")}>FR</button>
-            </div>
-            )}
+            <button onClick={() => changeLanguage("en")} className="font-bold cursor-pointer text-lg">EN</button>
+            <button onClick={() => changeLanguage("fr")} className="font-bold cursor-pointer text-lg">FR</button>
             <a href="#" className='btn btn-primary border-black text-white gap-3' target='_blank'>
-                Reach me
+                <span className="hidden md:block">{t('btn_contact')}</span>
                 <Send size={16} strokeWidth={2} />
             </a>
-        </nav>
+        </motion.nav>
     )
 }

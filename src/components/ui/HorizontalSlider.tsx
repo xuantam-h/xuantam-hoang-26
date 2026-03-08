@@ -14,13 +14,13 @@ export const HorizontalSlider = () => {
     }, []);
 
     return (
-        <div className="slider mt-10 overflow-hidden cursor-grab active:cursor-grabbing overflow-hidden">
+        <div className="slider mt-10 cursor-grab active:cursor-grabbing overflow-hidden">
             <motion.div 
                 ref={carousel}
                 drag="x"
                 dragConstraints={{ right: 0, left: -width }}
                 dragElastic={0.1}
-                className="slider-container flex gap-8 overflow-hidden"
+                className="slider-container flex gap-8"
             >
                 {projects.map((project) => (
                     <motion.div 
@@ -28,7 +28,7 @@ export const HorizontalSlider = () => {
                         className="min-w-[300px] md:min-w-[450px] flex-shrink-0"
                     >
                         <Card 
-                            img={project.img} 
+                            img={project.image}
                             title={project.title} 
                             url={project.url} 
                         />
