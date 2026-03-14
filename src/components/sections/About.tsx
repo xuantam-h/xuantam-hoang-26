@@ -1,25 +1,28 @@
 import { motion } from "framer-motion"
 import { Trans, useTranslation } from "react-i18next";
 import { Container } from "../../layouts/Container";
+import { Skills } from "./Skills";
+import { Subtitle } from "../ui/Subtitle";
+import { Title } from "../ui/Title";
 
 export const About = () => {
     const { t, ready } = useTranslation();
-    if (!ready) return null; // Ou un loader minimaliste
+    if (!ready) return null;
 
     return (
-        <section id="about" className="scene flex items-center justify-center min-h-screen">
+        <section id="about" className="my-40">
             <Container>
-                <motion.div 
-                    initial={{ opacity: 0, y: -10, filter: "blur(5px)" }}
-                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-                    className="md:w-1/2 text-center mx-auto">
-                    <p className="mt-6 text-xl md:text-3xl">
-                        <Trans i18nKey="about">
-                            I'm a dedicated <strong>Front-End React Developer</strong> based in Montreal, Canada. I have 4 years of expertise in building responsive, high-performance web applications using React. I like minimalist and aesthetic interfaces.
-                        </Trans>
-                    </p>
-                </motion.div>
+                <div className="md:flex items-center gap-10">
+                    <div className="content flex-1">
+                        <Title subtitle="Who I am" title="Hi, I'm Xuan-Tam." />
+                        <p className="text-lg md:text-xl">
+                            <Trans i18nKey="about">
+                                I'm a dedicated <strong>Front-End React Developer</strong> based in Montreal, Canada. I have 4 years of expertise in building responsive, high-performance web applications using React. I like minimalist and aesthetic interfaces.
+                            </Trans>
+                        </p>
+                    </div>
+                    <Skills />
+                </div>
             </Container>
         </section>
     )

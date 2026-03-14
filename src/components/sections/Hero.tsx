@@ -9,11 +9,11 @@ export const Hero = () => {
     const { t, i18n } = useTranslation();
 
         return (
-            <section id="hero" className="scene flex items-center justify-center min-h-screen">
+            <section id="hero" className="flex items-center justify-center min-h-screen">
                 <Container>
-                    <div className="hero-content md:w-1/2 text-center mx-auto">
+                    <div className="hero-content text-center mx-auto">
                         <h1 
-                        className="text-4xl md:text-5xl lg:text-7xl font-serif text-black">
+                        className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                             <Trans i18nKey="welcome">
                                 Ready to craft your <strong>digital experience</strong>
                             </Trans>

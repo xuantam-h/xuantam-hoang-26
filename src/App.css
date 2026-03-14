@@ -5,6 +5,7 @@
   --font-serif: "Newsreader Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-black: #2D2926;
   --color-white: #fff;
+  --color-navy: #040D12;
   --border-color: #eee;
 }
 
@@ -29,16 +30,11 @@ html,body{
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  place-items: normal;
-  background-color: #F4F3F2;
-  color:#4A4541;
+  background-color: var(--color-navy);
+  color:var(--color-white);
 }
 
-.scroll-snap-vertical {
+/* .scroll-snap-vertical {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -49,7 +45,7 @@ section{
   height: 100vh;
   display: grid;
   place-items: center;
-}
+} */
 
 .btn{
   display: inline-flex;
